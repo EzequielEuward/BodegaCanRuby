@@ -17,7 +17,7 @@ import {
   Restaurant,
   Cake,
 } from "@mui/icons-material";
-import { combos } from "../data/Combos.js";
+import { combos } from "../data/combos.js";
 
 function ComboCard({ combo }) {
   const [isExpanded, setIsExpanded] = useState(false);
