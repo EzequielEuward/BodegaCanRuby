@@ -30,9 +30,8 @@ function App() {
             backgroundImage: "url('/catas3.png')",
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center top',
-            
+
             backgroundSize: '100% auto',
-            zIndex: 10,
             minHeight: { xs: 'auto', md: '600px', lg: '600px', xl: '600px' },
             display: 'flex',
             flexDirection: 'column',
@@ -47,7 +46,7 @@ function App() {
         <Box
           sx={{
             position: 'relative',
-            zIndex: 1,
+            zIndex: 2,
             backgroundImage: "url('/cestaT1.png')",
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center top',
@@ -68,7 +67,7 @@ function App() {
         <Box
           sx={{
             position: 'relative',
-            zIndex: 1,
+            zIndex: 3,
             backgroundImage: "url('/lotesArriba.png')",
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center top',
@@ -82,12 +81,11 @@ function App() {
         >
           <LoteSection />
           <PackSection />
-          {/* Imagen inferior (1920x400) */}
           <Box
             sx={{
               width: '100%',
-              height: { xs: 300, md: 400 }, // altura adaptable
-              backgroundImage: "url('/lotesAbajo.png')", // ⬅️ tu nueva imagen
+              height: { xs: 300, md: 400 },
+              backgroundImage: "url('/lotesAbajo.png')",
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center bottom',
               backgroundSize: '100% auto',
@@ -103,11 +101,10 @@ function App() {
         <Box
           sx={{
             position: 'relative',
-            zIndex: 1,
+            zIndex: 4,
             backgroundImage: "url('/lastSeccion.png')",
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center -43px',
-
             backgroundSize: '100% auto',
             backgroundColor: '#fff',
             minHeight: { xs: 'auto', md: '400', lg: '400px', xl: '400px' },
@@ -122,11 +119,10 @@ function App() {
         <Box
           sx={{
             position: 'relative',
-            zIndex: 1,
+            zIndex: 5,
             backgroundImage: "url('/lastSeccion.png')",
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center -490px',
-
             backgroundSize: '100% auto',
             backgroundColor: '#fff',
             minHeight: { xs: 'auto', md: '400', lg: '400px', xl: '400px' },
