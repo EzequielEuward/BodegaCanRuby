@@ -1,0 +1,198 @@
+export const combos = [
+  {
+    title: "Es Padrí",
+
+    subtitle: "Lote Gastronómico",
+    price: "177.95 € + IVA",
+    description: "El regalo ideal para los paladares más exigentes, con productos gourmet y una selección de vinos excepcionales. Perfecto para ocaciones especiales o para sorprender a alguien con lo mejor de la gastronomía.",
+    wines: [
+      "1 Bot La Mar de Bé Tinto Cuvée  Semi Crianza",
+      "1 Bot Alada Rosado ECO Cabernet Sauvignon",
+      "1 Bot Es Padrí 2020 Tinto crianza",
+      "1 Bot Hierbas Rubí Dulce 70cl",
+      "1 Bot Cava Eudald Eco Natura",
+      "1 Bot Limoncello Sorrento 25% 70cl",
+    ],
+    meats: [
+      "1 Pack Cuña Semi 225gr + Cuña Curado 200gr Coinga",
+      "1 Jamón Serrano Duro 7.5kg Grana Reserva",
+      "1 Chorizo Ibérico Vela 250 gr",
+      "1 Bote Aceitunas Verdes Partidas 250gr",
+    ],
+    sweets: [
+      "1 Chocolate Simón Coll 70% Cacao 85gr",
+      "1 Surtido Tradicional Navidad Le Confitera 300gr",
+      "1 Turrón Duro Almendra Can Guixé 200gr",
+      "1 Turrón Choco Crujiente Pico 200gr",
+    ],
+  },
+  {
+    title: "La Mar de Bé",
+
+    subtitle: "Experiencia Mediterránea",
+    price: "96.95 € + IVA",
+    description: "Una selección elegante y equilibrada de vinos y productos gourmet mediterráneos, perfecta para disfrutar en celebraciones o regalar con estilo. Refleja calidad y buen gusto en cada detalle.",
+    wines: [
+      "1 Bot La Mar de Bé Cuvée Semi Crianza",
+      "1 Bot Alada Rosado ECO Cabernet Sauvignon",
+      "1 Bot Es Padrí 2020 Tinto Crianza",
+      "1 Bot Hierbas Rubí Dulces 70cl",
+      "1 Bot Cava Eudald Eco Brut Nature",
+      "1 Bot Limoncello Sammarco 25% 70cl",
+    ],
+    meats: [
+      "1 Pack Cuña Semi 225gr + Cuña Curado 200gr Coinga",
+      "1 80gr de Jamón de Bellota Estirpe Negra al Vacío",
+      "1 Chorizo Ibérico Vela 250gr",
+      "1 Galletas Gori de Muro Picantes 240gr",
+      "1 Bote Aceitunas Verdes Partidas 250gr",
+    ],
+    sweets: [
+      "1 Chocolate Simón Coll 70% Cacao 85gr",
+      "1 Surtido Tradicional Navidad La Confitera 300gr",
+      "1 Turrón Blondo Almendra Can Guixé 200gr",
+      "1 Turrón Duro Almendra Can Guixé 200gr",
+      "1 Turrón Choco Crujiente Pico 200gr",
+    ],
+  },
+  {
+    title: "Camí Entre Vinyes",
+    subtitle: "Tradición y Modernidad",
+    price: "82.95 € + IVA",
+    description: "Para quienes disfrutan de la tradición con un toque contemporáneo, este lote ofrece vinos exclusivos, tapas y productos artesanales. Una experiencia gastronómica única para los amantes del buen vivir.",
+    wines: [
+      "1 Bot Rubí Es Padrí Crianza",
+      "1 Bot Alada Blanco ECO Chardonay",
+      "1 Bot Camí Entre Vinyes Tinto ECO",
+      "1 Bot Hierbas Rubí Dulces 70cl",
+      "1 Bot Cava Eudald Eco Brut Nature",
+      "1 Bot Limoncello Sammarco 25% 70cl",
+    ],
+    meats: [
+      "1 Tapas Mix N° 1 (Mejillón + Sardinilla + Tacos Pota)",
+      "1 Pack Cuña Semi 225gr + Cuña Curado 200gr Coinga", // Nota: En la imagen dice "Cemi" pero en las anteriores era "Semi", usé "Semi" por consistencia.
+      "1 80gr de Jamón de Bellota Estirpe Negra al Vacío",
+      "1 Chorizo Ibérico Vela 250gr",
+    ],
+    sweets: [
+      "1 Chocolate Simón Coll 70% Cacao 85gr",
+      "1 Surtido Tradicional Navidad La Confitera 300gr",
+      "1 Turrón Duro Almendra Can Guixé 200gr",
+      "1 Turrón Choco Crujiente Pico 200gr",
+    ],
+  },
+  {
+    title: "Endiumenjat",
+    subtitle: "Elegancia y Refinamiento",
+    price: "129.95 € + IVA",
+    description: "Un lujo accesible con una selección de vinos, vermut y productos gourmet que evocan los sabores más auténticos. Ideal para compartir en momentos especiales con amigos y familia.",
+    wines: [
+      "1 Bot Alada Cuvée ECO Semi Crianza",
+      "1 Bot Alada Blanco ECO Chardonay",
+      "1 Bot Vermut Endiumenjat Blanco Tradicional",
+      "1 Bot Vermut Endiumenjat Rojo Tradicional",
+      "1 Bot Cava Eudald Eco Brut Nature",
+    ],
+    meats: [
+      "1 Tapas Mix N° 1 (Mejillón + Sardinilla + Tacos Pota)",
+      "1 Pack Cuña Cemi 225gr + Cuña Curado 200gr Coinga", // (Transcribo "Cemi" como dice la imagen)
+      "1 Chorizo Ibérico Vela 250gr",
+      "1 Paleta Cebo Ibérico Cert Brida Blanca 4.5-5Kg",
+    ],
+    sweets: [
+      "1 Chocolate Simón Coll 70% Cacao 85gr",
+      "1 Surtido Tradicional Navidad La Confitera 300gr",
+      "1 Turrón Duro Almendra Can Guixé 200gr",
+      "1 Bote Barquillos Pico Artesanos Cacao 175gr",
+    ],
+  },
+  {
+    title: "Alternativo Sin Alcohol",
+    subtitle: "Salud y Bienestar",
+    price: "59.95 € + IVA",
+    description: "Una opción gourmet sin alcohol que ofrece calidad y sabor en cada bocado. Perfecto para aquellos que buscan productos saludables sin renunciar al placer gastronómico.",
+    wines: [],
+    meats: [
+      "1 Aceite Virgen Extra Bernad 500ml",
+      "1 Queso Semi Curado Binigarba 380gr Aprox.",
+      "1 Pack Cuña Semi 225gr + Cuña Curado 200gr Coinga",
+      "1 Sal Chili y Romero 250gr",
+      "1 Bote Aceitunas Verdes Partidas 250gr",
+    ],
+    sweets: [
+      "1 Nueces Mitades 500gr",
+      "1 Bote Barquillos Pico Artesanos Cacao 175gr",
+      "1 Almendras Tostadas 500 gr",
+      "1 Chocolate Simón Coll 70% Cacao 85gr",
+      "1 Turrón Choco Crujiente Pico 200gr",
+      "1 Turrón Blando Almendra Can Guixé 200gr",
+      "1 Turrón Duro Almendra Can Guixé 200gr",
+    ],
+  },
+  {
+    title: "Alada",
+    subtitle: "Placer Auténtico",
+    price: "59.95 € + IVA",
+    description: "Vinos y embutidos selectos para los amantes de lo auténtico, combinados con sabores tradicionales que elevan cualquier ocasión. Un detalle gourmet que refleja cuidado y buen gusto.",
+    wines: [
+      "1 Bot Alada Cuvée ECO Semi Crianza",
+      "1 Bot Cava Eudald Eco Brut Nature",
+      "1 Bot Vermut Endiumenjat Rojo Tradicional",
+    ],
+    meats: [
+      "1 Tapas Mix N° 1 (Mejillón+ Sardinilla+ Tacos Pota) 50gr*3",
+      "1 Pack Cuña Semi 225gr + Cuña Curado 200gr Coinga",
+      "1 Sobrasada Xama de Sa Pobla 450gr Aprox.",
+      "1 Chorizo Ibérico Vela 250gr",
+    ],
+    sweets: [
+      "1 Surtido Tradicional Navidad La Confitera 300gr",
+      "1 Turrón Choco Crujiente Pico 200gr",
+      "1 Turrón Blando Almendra Can Guixé 200gr",
+      "1 Turrón Duro Almendra Can Guixé 200gr",
+    ],
+  },
+  {
+    title: "Voramar",
+    subtitle: "Festín Ibérico",
+    price: "99.95 € + IVA",
+    description: "Un lote completo con vinos y productos ibéricos de alta calidad, pensado para quienes disfrutan de lo mejor en cada celebración. Ideal para compartir y disfrutar con los seres queridos.",
+    wines: [
+      "1 Bot Es Padrí 2020 Tinto Crianza",
+      "1 Bot Cava Eudald Eco Brut Nature",
+    ],
+    meats: [
+      "1 Pack Cuña Semi 225gr + Cuña Curado 200gr Coinga",
+      "1 Chorizo Ibérico Vela 250gr",
+      "1 Paleta Cebo Ibérico Cert Brida Blanca 4.5-5Kg",
+    ],
+    sweets: [
+      "1 Surtido Tradicional Navidad La Confitera 300gr",
+      "1 Turrón Choco Crujiente Pico 200gr",
+      "1 Chocolate Simón Coll 70% Cacao 85 gr",
+      "1 Turrón Blando Almendra Can Guixé 200gr",
+      "1 Turrón Duro Almendra Can Guixé 200gr",
+    ],
+  },
+  {
+    title: "Jove",
+    subtitle: "Sabor Tradicional",
+    price: "33.95 € + IVA",
+    description: "Una selección práctica y deliciosa con productos tradicionales y un toque moderno. Perfecto para regalar a quienes disfrutan de los placeres gourmet.",
+    wines: [
+      "1 Bot Alada Cuvée ECO Semi Crianza",
+      "1 Bot Limoncello Sammarco 25% 70cl",
+    ],
+    meats: [
+      "1 Sobrasada Xama de Sa Pobla 450gr Aprox.",
+      "1 Galletas Gori de Muro Picantes 240gr",
+      "1 Bote Aceitunas Verdes Partidas 250gr",
+    ],
+    sweets: [
+      "1 Chocolate Simón Coll 70% Cacao 85gr",
+      "1 Turrón Choco Crujiente Pico 200gr",
+      "1 Turrón Duro Almendra Can Guixé 200gr",
+    ],
+  },
+];
+export default combos;
