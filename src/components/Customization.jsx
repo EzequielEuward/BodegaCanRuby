@@ -11,7 +11,7 @@ export const Customization = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "linear-gradient(to bottom, #7C0D14 10%, #721416 60%, #721416 100%)",
+        background: "linear-gradient(to bottom, #991019fb 0%, #8D0C15 50%, #611115 100%)",
         py: { xs: 6, md: 10 },
       }}
     >

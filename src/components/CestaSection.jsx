@@ -32,7 +32,7 @@ export const CestaSection = () => {
               fontFamily: "lora, serif",
               marginBottom: { xs: '15px', md: '20px' },
               lineHeight: 1.6,
-              textAlign: 'center',
+              textAlign: 'justify',
               color: '#fff',
               fontSize: {
                 xs: '1rem',

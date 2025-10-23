@@ -70,7 +70,7 @@ function App() {
                 xs: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
                 sm: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
                 md: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
-                lg: "url('/cestatop.png')", 
+                lg: "url('/cestaT1.png')", 
               },
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center top',
@@ -167,21 +167,24 @@ function App() {
       </section>
 
       <section>
-        <Box
-          sx={{
-            position: 'relative',
-            zIndex: 4,
-            backgroundImage: "url('/lastSeccion.png')",
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center -43px',
-            backgroundSize: '100% auto',
-            backgroundColor: '#fff',
-            minHeight: { xs: 'auto', md: '400', lg: '400px', xl: '400px' },
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}
-        >
+         <Box
+            sx={{
+              backgroundImage: {
+                xs: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
+                sm: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
+                md: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
+                lg: "url('/cestatopT.png')", 
+              },
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center top',
+              minHeight: { xs: '200px', sm: '250px', md: '250px', lg: '250px' },
+              width: '100%',
+              display: 'flex',
+              alignItems: 'flex-start',
+              justifyContent: 'center',
+              pt: { xs: 4, md: 6 },
+            }}
+          >
           <CustomSection />
 
         </Box>
@@ -189,9 +192,9 @@ function App() {
           sx={{
             position: 'relative',
             zIndex: 5,
-            backgroundImage: "url('/lastSeccion.png')",
+            mt: { xs: -4, md: -6 },
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center -490px',
+            backgroundPosition: 'center ',
             backgroundSize: '100% auto',
             backgroundColor: '#fff',
             minHeight: { xs: 'auto', md: '400', lg: '400px', xl: '400px' },
