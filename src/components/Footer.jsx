@@ -11,29 +11,26 @@ import { motion } from "framer-motion";
 import { Phone, Email, LocationOn, Language } from "@mui/icons-material";
 
 const iconStyle = {
-  minWidth: 32,
+  minWidth: 36,
   color: "#f7e7c6",
-  fontSize: "1.1rem",
+  fontSize: "1.3rem",
 };
 
 const textStyle = {
   fontFamily: "'Lora', serif",
-  fontSize: "0.95rem",
+  fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem" },
   color: "#f7e7c6",
-  lineHeight: 1.4,
+  lineHeight: 1.6,
 };
-// ---
 
+// ---
 export const Footer = () => {
   return (
     <Box
       sx={{
         position: "relative",
         minHeight: "120vh",
-        // --- ESTE ES EL CAMBIO ---
-        // Reemplazamos el gradiente por el color sólido de la sección de arriba
-        background: "#981b1e", 
-        // -------------------------
+        background: "#981b1e",
         color: "#f7e7c6",
         display: "flex",
         flexDirection: "column",
@@ -44,7 +41,7 @@ export const Footer = () => {
         px: 2,
       }}
     >
-      {/* Fondo decorativo navideño (Este se queda igual) */}
+      {/* Imagen de fondo */}
       <Box
         component="img"
         src="contraportada2.png"
@@ -58,8 +55,6 @@ export const Footer = () => {
           zIndex: 0,
         }}
       />
-
-      {/* Capa semitransparente (Esta se queda igual) */}
       <Box
         sx={{
           position: "absolute",
@@ -69,28 +64,28 @@ export const Footer = () => {
         }}
       />
 
-      {/* Contenido principal (Este se queda igual) */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         style={{
           zIndex: 2,
-          width: "100%", 
-          maxWidth: "800px", 
-          padding: "16px", 
+          width: "100%",
+          maxWidth: "800px",
+          padding: "16px",
         }}
       >
-        {/* --- 1. SECCIÓN DE CONTACTO (Alineada a la izquierda) --- */}
-        <Box sx={{ mb: 6 }}>
+        {/* --- Sección de contacto --- */}
+        <Box sx={{ mb: 8, textAlign: { xs: "center", sm: "left" } }}>
           <Typography
-            variant="h5" 
+            variant="h5"
             sx={{
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 600,
-              color: "#fff",
-              mb: 2,
-              textAlign: "left", 
+              fontFamily: "Lora, serif",
+              flexDirection: { xs: "column", sm: "row" },
+              fontWeight: 700,
+              fontSize: { xs: "1.7rem", sm: "2rem", md: "2.2rem" },
+              color: "#f7e7c6",
+              mb: 3,
             }}
           >
             Contáctanos
@@ -135,10 +130,10 @@ export const Footer = () => {
               </ListItemIcon>
               <ListItemText
                 primary="Plaça Nova, 26 – 07320 Santa Maria del Camí"
-                secondary="Illes Balears España"
+                secondary="Illes Balears, España"
                 primaryTypographyProps={{ style: textStyle }}
                 secondaryTypographyProps={{
-                  style: { ...textStyle, opacity: 0.8, fontSize: "0.85rem" },
+                  style: { ...textStyle, opacity: 0.85, fontSize: { xs: "0.9rem", sm: "1rem" } },
                 }}
               />
             </ListItem>
@@ -163,37 +158,28 @@ export const Footer = () => {
           </List>
         </Box>
 
-        {/* --- 2. ESLOGAN (Centrado) --- */}
+        {/* --- Eslogan centrado --- */}
         <Typography
           variant="h3"
           sx={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "Lora, serif",
             fontWeight: 600,
             color: "#fce8b2",
-            mb: 4,
             textShadow: "2px 2px 8px rgba(0,0,0,0.4)",
-            textAlign: "center", 
+            fontSize: { xs: "1.8rem", sm: "2.4rem", md: "2.8rem" },
           }}
         >
           ¡Celebra la Navidad con elegancia y sabor!
         </Typography>
 
-        <Box
-          sx={{
-            color: "#fce8b2",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center", 
-            mt: 6,
-          }}
-        >
+        {/* Logo centrado */}
+        <Box sx={{ mt: 4 }}>
           <Box
             component="img"
             src="logo-blanco.png"
             alt="Bodega Can Rubí"
             sx={{
-              mt: 6,
-              width: { xs: 180, sm: 220 },
+              width: { xs: 180, sm: 220, md: 260 },
               filter: "drop-shadow(0px 2px 4px rgba(0,0,0,0.5))",
               zIndex: 2,
             }}
@@ -203,4 +189,5 @@ export const Footer = () => {
     </Box>
   );
 };
+
 export default Footer;

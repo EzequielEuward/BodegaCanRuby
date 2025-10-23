@@ -70,7 +70,7 @@ function App() {
                 xs: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
                 sm: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
                 md: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
-                lg: "url('/cestaT1.png')", 
+                lg: "url('/cestaT1.png')",
               },
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center top',
@@ -93,6 +93,28 @@ function App() {
               backgroundSize: '100% auto',
               flex: 1,
               width: '100%',
+              '&::before': {
+                content: '""',
+                position: 'flex',
+                top: 0,
+                left: 0,
+                height: '100%',
+                width: '100px',
+                background: 'linear-gradient(to right, rgba(0, 0, 0, 0.15), transparent)',
+                pointerEvents: 'none',
+                zIndex: 1,
+              },
+              '&::after': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                right: 0,
+                height: '100%',
+                width: '100px',
+                background: 'linear-gradient(to left, rgba(0, 0, 0, 0.15), transparent)',
+                pointerEvents: 'none',
+                zIndex: 1,
+              },
             }}
           >
             <CestaNavideniaSection />
@@ -108,6 +130,28 @@ function App() {
             backgroundColor: '#fff',
             display: 'flex',
             flexDirection: 'column',
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              height: '100%',
+              width: '100px',
+              background: 'linear-gradient(to right, rgba(0, 0, 0, 0.15), transparent)',
+              pointerEvents: 'none',
+              zIndex: 1,
+            },
+            '&::after': {
+              content: '""',
+              position: 'absolute',
+              top: 0,
+              right: 0,
+              height: '100%',
+              width: '100px',
+              background: 'linear-gradient(to left, rgba(0, 0, 0, 0.15), transparent)',
+              pointerEvents: 'none',
+              zIndex: 1,
+            },
           }}
         >
           {/* Parte superior con fondo rojo para LoteSection */}
@@ -147,12 +191,33 @@ function App() {
               backgroundSize: '100% auto',
               width: '100%',
               flex: 1,
+              position: 'relative',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                height: '100%',
+                width: '100px',
+                background: 'linear-gradient(to right, rgba(0, 0, 0, 0.15), transparent)',
+                pointerEvents: 'none',
+                zIndex: 1,
+              },
+              '&::after': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                right: 0,
+                height: '100%',
+                width: '100px',
+                background: 'linear-gradient(to left, rgba(0, 0, 0, 0.15), transparent)',
+                pointerEvents: 'none',
+                zIndex: 1,
+              },
             }}
           >
             <PackSection />
           </Box>
-
-          {/* Parte inferior decorativa */}
           <Box
             sx={{
               width: '100%',
@@ -161,30 +226,53 @@ function App() {
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center bottom',
               backgroundSize: '100% auto',
+              position: 'relative',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                height: '100%',
+                width: '100px',
+                background: 'linear-gradient(to right, rgba(0, 0, 0, 0.15), transparent)',
+                pointerEvents: 'none',
+                zIndex: 1,
+              },
+              '&::after': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                right: 0,
+                height: '100%',
+                width: '100px',
+                background: 'linear-gradient(to left, rgba(0, 0, 0, 0.15), transparent)',
+                pointerEvents: 'none',
+                zIndex: 1,
+              },
             }}
           />
         </Box>
       </section>
 
       <section>
-         <Box
-            sx={{
-              backgroundImage: {
-                xs: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
-                sm: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
-                md: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
-                lg: "url('/cestatopT.png')", 
-              },
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center top',
-              minHeight: { xs: '200px', sm: '250px', md: '250px', lg: '250px' },
-              width: '100%',
-              display: 'flex',
-              alignItems: 'flex-start',
-              justifyContent: 'center',
-              pt: { xs: 4, md: 6 },
-            }}
-          >
+        <Box
+          sx={{
+            backgroundImage: {
+              xs: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
+              sm: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
+              md: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
+              lg: "url('/cestatopT.png')",
+            },
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center top',
+            minHeight: { xs: '200px', sm: '250px', md: '250px', lg: '250px' },
+            width: '100%',
+            display: 'flex',
+            alignItems: 'flex-start',
+            justifyContent: 'center',
+            pt: { xs: 4, md: 6 },
+          }}
+        >
           <CustomSection />
 
         </Box>

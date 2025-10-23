@@ -30,11 +30,11 @@ function ComboCard({ combo }) {
         borderRadius: "20px",
         p: { xs: 1.75, sm: 2.5 },
         boxShadow: "0 10px 18px -6px rgba(0, 0, 0, 0.12)",
-        height: "100%",
         display: "flex",
         flexDirection: "column",
         width: "90%",
         overflow: "visible",
+        minHeight: { xs: 350, sm: 350, md: 200 },
       }}
     >
       <CardContent
@@ -192,7 +192,7 @@ export const PackSection = () => {
       maxWidth="lg"
       sx={{
         py: { xs: 5, sm: 6, md: 7 },
-        px: { xs: 3, sm: 4, md: 6 }, // más padding lateral en móvil
+        px: { xs: 3, sm: 4, md: 6 }, 
       }}
     >
       <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 4, md: 3 } }}>

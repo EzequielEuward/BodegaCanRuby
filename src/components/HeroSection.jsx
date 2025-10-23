@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 import { motion } from "framer-motion";
-import WavyDivider from "./WavyDivider"; // Ajusta la ruta según tu estructura
+import WavyDivider from "./WavyDivider";
 
 export const HeroSection = () => {
   return (
@@ -45,69 +45,139 @@ export const HeroSection = () => {
         }}
       />
 
-      {/* Contenido principal */}
-      <motion.div
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        style={{ zIndex: 2, maxWidth: "800px" }}
-      >
-        <Typography
-          variant="h3"
-          sx={{
-            fontFamily: "'Playfair Display', serif",
-            fontWeight: 600,
-            color: "#fce8b2",
-            mb: 2,
-            textShadow: "2px 2px 8px rgba(0,0,0,0.4)",
-          }}
+      {/* Contenido principal - RESPONSIVE */}
+      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
+        <motion.div
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          style={{ width: "100%" }}
         >
-          Tu brindis navideño empieza en{" "}
-          <Box component="span" sx={{ color: "#fff" }}>
-            Can Rubí
-          </Box>
-          .
-        </Typography>
+          <Typography
+            variant="h3"
+            sx={{
+              fontFamily: "Lora, serif",
+              fontStyle: "italic",
+              fontWeight: 700,
+              color: "#fce8b2",
+              mb: 2,
+              textShadow: "2px 2px 8px rgba(0,0,0,0.4)",
+              whiteSpace: { xs: "normal", sm: "nowrap" },
+              fontSize: {
+                xs: "1.75rem",
+                sm: "2rem",
+                md: "2.5rem",
+                lg: "3rem"
+              },
+              lineHeight: { xs: 1.3, sm: 1.2 },
+              px: { xs: 1, sm: 2 }
+            }}
+          >
+            Tu brindis navideño {""}
+            <Box
+              component="span"
+              sx={{
+                color: "#fce8b2",
+                fontFamily: "Lora, serif",
 
-        <Typography
-          variant="h4"
-          sx={{
-            fontFamily: "'Playfair Display', serif",
-            fontWeight: 700,
-            mb: 3,
-            color: "#fff",
-            textShadow: "2px 2px 8px rgba(0,0,0,0.3)",
-          }}
-        >
-          ¡Descubre nuestros lotes gourmet y sorprende!
-        </Typography>
+                fontStyle: "italic",
+                fontWeight: 500,
+              }}
+            >
+              embieza en {""}
+            </Box>
+            <Box
+              component="span"
+              sx={{
+                color: "#fce8b2",
+                fontFamily: "Lora, serif",
 
-        <Typography
-          variant="h6"
-          sx={{
-            fontFamily: "'Lora', serif",
-            color: "#f7e7c6",
-            fontWeight: 400,
-            mb: 5,
-          }}
-        >
-          Detalles únicos para empleados, clientes o sorteos.
-        </Typography>
+                fontStyle: "italic bold",
+                fontWeight: 800,
+              }}
+            >
+              Can Rubí
+            </Box>
+            .
+          </Typography>
+          <br />
+          <Typography
+            variant="h4"
+            sx={{
+              fontFamily: "'Lora', serif",
+              fontWeight: 800,
+              mb: 3,
+              color: "#fce8b2",
+              textShadow: "2px 2px 8px rgba(0,0,0,0.3)",
+              fontSize: {
+                xs: "1.25rem",
+                sm: "1.5rem",
+                md: "1.75rem",
+                lg: "2.125rem"
+              },
+              px: { xs: 1, sm: 0 }
+            }}
+          >
+            ¡Descubre  {""}
 
-        {/* Logo */}
-        <Box
-          component="img"
-          src="logo-blanco.png"
-          alt="Bodega Can Rubí"
-          sx={{
-            mt: 6,
-            width: { xs: 180, sm: 220 },
-            filter: "drop-shadow(0px 2px 4px rgba(0,0,0,0.5))",
-            zIndex: 2,
-          }}
-        />
-      </motion.div>
-  
+            <Box
+              component="span"
+              sx={{
+                color: "#fce8b2",
+                fontFamily: "Lora, serif",
+
+                fontStyle: "italic",
+                fontWeight: 500,
+              }}
+            >
+              nuestros {""}
+            </Box>
+            <Box
+              component="span"
+              sx={{
+                color: "#fce8b2",
+                fontFamily: "Lora, serif",
+
+                fontStyle: "italic bold",
+                fontWeight: 800,
+              }}
+            >
+              lotes gourmet y sorprende!
+            </Box>
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              fontFamily: "'Lora', serif",
+              color: "#f7e7c6",
+              fontStyle: "italic",
+              fontWeight: 500,
+              mb: 5,
+              fontSize: {
+                xs: "1.25rem",
+                sm: "1.5rem",
+                md: "1.75rem",
+                lg: "1.65rem"
+              },
+              px: { xs: 2, sm: 0 }
+            }}
+          >
+            Detalles únicos para empleados, <br />  clientes o sorteos.
+          </Typography>
+
+          {/* Logo */}
+          <Box
+            component="img"
+            src="logo-blanco.png"
+            alt="Bodega Can Rubí"
+            sx={{
+              mt: { xs: 4, sm: 6 },
+              width: { xs: 150, sm: 180, md: 200, lg: 220 },
+              filter: "drop-shadow(0px 2px 4px rgba(0,0,0,0.5))",
+            }}
+          />
+        </motion.div>
+      </Container>
     </Box>
   );
 };
