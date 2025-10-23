@@ -178,7 +178,6 @@ export const Footer = () => {
           ¡Celebra la Navidad con elegancia y sabor!
         </Typography>
 
-        {/* --- 3. LOGO (Centrado y recreado con texto) --- */}
         <Box
           sx={{
             color: "#fce8b2",

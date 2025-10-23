@@ -1,4 +1,5 @@
 import { Box, Typography, Grid, Divider, Stack } from "@mui/material";
+import GradeIcon from '@mui/icons-material/Grade'; // <-- Ícono importado
 
 export const Customization = () => {
   return (
@@ -10,7 +11,7 @@ export const Customization = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-      background: "linear-gradient(to bottom, #7C0D14 10%, #721416 60%, #721416 100%)",
+        background: "linear-gradient(to bottom, #7C0D14 10%, #721416 60%, #721416 100%)",
         py: { xs: 6, md: 10 },
       }}
     >
@@ -26,7 +27,7 @@ export const Customization = () => {
           m: 0,
         }}
       >
-        {/* Imagen redonda */}
+        {/* Imagen redonda (SIN CAMBIOS) */}
         <Grid item xs={12} md={5} sx={{ textAlign: "center" }}>
           <Box
             component="img"
@@ -63,14 +64,13 @@ export const Customization = () => {
             {/* Paso 1 */}
             <Box>
               <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-                <Box
-                  component="img"
-                  src="/star-icon.svg"
-                  alt="estrella"
+                {/* REEMPLAZADO */}
+                <GradeIcon
                   sx={{
                     width: "28px",
                     height: "28px",
                     mr: 1.5,
+                    color: "gold",
                   }}
                 />
                 <Typography
@@ -78,7 +78,7 @@ export const Customization = () => {
                   sx={{
                     color: "#fff5e1",
                     fontWeight: 600,
-                     fontFamily: "Lora, serif",
+                    fontFamily: "Lora, serif",
                     fontSize: { xs: "1.3rem", md: "1.5rem" },
                   }}
                 >
@@ -90,7 +90,7 @@ export const Customization = () => {
                   color: "#f1d0d0",
                   fontSize: "1rem",
                   pl: 5,
-                   fontFamily: "Lora, serif",
+                  fontFamily: "Lora, serif",
                   mb: 2,
                 }}
               >
@@ -102,14 +102,13 @@ export const Customization = () => {
             {/* Paso 2 */}
             <Box>
               <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-                <Box
-                  component="img"
-                  src="/star-icon.svg"
-                  alt="estrella"
+                {/* REEMPLAZADO */}
+                <GradeIcon
                   sx={{
                     width: "28px",
                     height: "28px",
                     mr: 1.5,
+                    color: "gold",
                   }}
                 />
                 <Typography
@@ -118,7 +117,7 @@ export const Customization = () => {
                     color: "#fff5e1",
                     fontWeight: 600,
                     fontSize: { xs: "1.3rem", md: "1.5rem" },
-                     fontFamily: "Lora, serif",
+                    fontFamily: "Lora, serif",
                   }}
                 >
                   Personaliza Tu Selección
@@ -141,14 +140,13 @@ export const Customization = () => {
             {/* Paso 3 */}
             <Box>
               <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-                <Box
-                  component="img"
-                  src="/star-icon.svg"
-                  alt="estrella"
+                {/* REEMPLAZADO */}
+                <GradeIcon
                   sx={{
                     width: "28px",
                     height: "28px",
                     mr: 1.5,
+                    color: "gold",
                   }}
                 />
                 <Typography
@@ -156,7 +154,7 @@ export const Customization = () => {
                   sx={{
                     color: "#fff5e1",
                     fontWeight: 600,
-                     fontFamily: "Lora, serif",
+                    fontFamily: "Lora, serif",
                     fontSize: { xs: "1.3rem", md: "1.5rem" },
                   }}
                 >
@@ -167,7 +165,7 @@ export const Customization = () => {
                 sx={{
                   color: "#f1d0d0",
                   fontSize: "1rem",
-                   fontFamily: "Lora, serif",
+                  fontFamily: "Lora, serif",
                   pl: 5,
                 }}
               >

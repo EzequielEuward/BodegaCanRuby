@@ -17,7 +17,7 @@ import {
   Restaurant,
   Cake,
 } from "@mui/icons-material";
-import { combos } from "../data/combos.js";
+import { combos } from "../data/combos";
 
 function ComboCard({ combo }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -27,13 +27,14 @@ function ComboCard({ combo }) {
     <Card
       sx={{
         backgroundColor: "#f5e6d3",
-        borderRadius: "24px",
-        p: 3,
-        boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+        borderRadius: "20px",
+        p: { xs: 1.75, sm: 2.5 },
+        boxShadow: "0 10px 18px -6px rgba(0, 0, 0, 0.12)",
         height: "100%",
         display: "flex",
         flexDirection: "column",
-        width: "100%",
+        width: "90%",
+        overflow: "visible",
       }}
     >
       <CardContent
@@ -48,7 +49,7 @@ function ComboCard({ combo }) {
         <Typography
           variant="h3"
           sx={{
-            fontSize: { xs: "1.5rem", md: "2rem" },
+            fontSize: { xs: "1.35rem", sm: "1.6rem", md: "2rem" },
             color: "#5c1a1a",
             fontWeight: 700,
             fontFamily: "Lora, serif",
@@ -60,7 +61,7 @@ function ComboCard({ combo }) {
 
         <Typography
           sx={{
-            fontSize: { xs: "0.875rem", md: "1.2rem" },
+            fontSize: { xs: "0.88rem", sm: "0.95rem", md: "1.15rem" },
             color: "#5c1a1a",
             fontWeight: 800,
             fontFamily: "Lora, serif",
@@ -85,9 +86,9 @@ function ComboCard({ combo }) {
               "&:hover": { backgroundColor: "#7a2424" },
               color: "white",
               borderRadius: "9999px",
-              px: 3,
-              py: 1.5,
-              fontSize: "1rem",
+              px: { xs: 2.5, sm: 3 },
+              py: { xs: 1, sm: 1.5 },
+              fontSize: { xs: "0.92rem", sm: "1rem" },
               fontWeight: "600",
               textTransform: "none",
             }}
@@ -98,8 +99,8 @@ function ComboCard({ combo }) {
           <IconButton
             onClick={() => setIsExpanded(!isExpanded)}
             sx={{
-              width: 40,
-              height: 40,
+              width: { xs: 36, sm: 40 },
+              height: { xs: 36, sm: 40 },
               borderRadius: "50%",
               border: "2px solid #5c1a1a",
               color: "#5c1a1a",
@@ -111,14 +112,13 @@ function ComboCard({ combo }) {
           </IconButton>
         </Box>
 
-
-        <Collapse in={isExpanded} timeout="auto" >
+        <Collapse in={isExpanded} timeout="auto">
           <Typography
             sx={{
-              fontSize: "0.875rem",
+              fontSize: { xs: "0.85rem", sm: "0.9rem" },
               color: "#5c1a1a",
               mb: 2,
-              lineHeight: 1.625,
+              lineHeight: 1.6,
               whiteSpace: "pre-line",
               wordBreak: "break-word",
             }}
@@ -156,13 +156,14 @@ function ItemList({ icon, color, items }) {
       <Box
         sx={{
           flexShrink: 0,
-          width: 40,
-          height: 40,
+          width: { xs: 30, sm: 40 },
+          height: { xs: 30, sm: 40 },
           backgroundColor: color,
           borderRadius: "50%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          color: "white",
         }}
       >
         {icon}
@@ -172,7 +173,10 @@ function ItemList({ icon, color, items }) {
         {items.map((item, index) => (
           <Typography
             key={index}
-            sx={{ fontSize: { xs: "0.75rem", md: "0.875rem" } }}
+            sx={{
+              fontSize: { xs: "0.75rem", sm: "0.82rem", md: "0.9rem" },
+              lineHeight: 1.45,
+            }}
           >
             {item}
           </Typography>
@@ -184,21 +188,33 @@ function ItemList({ icon, color, items }) {
 
 export const PackSection = () => {
   return (
-    <Container maxWidth="lg" sx={{ py: 6 }}>
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
-        <Box sx={{ width: "100%" }}>
+    <Container
+      maxWidth="lg"
+      sx={{
+        py: { xs: 5, sm: 6, md: 7 },
+        px: { xs: 3, sm: 4, md: 6 }, // más padding lateral en móvil
+      }}
+    >
+      <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 4, md: 3 } }}>
+        {/* Imagen de "Lote 2025" */}
+        <Box sx={{ width: "100%", textAlign: "center" }}>
           <Box
             component="img"
             src="Lote 2025.png"
             alt="Lotes Navideños 2025"
-            sx={{ width: "100%", height: "auto" }}
+            sx={{
+              width: { xs: "88%", sm: "75%", md: "65%", lg: "55%" },
+              maxWidth: "500px",
+              height: "auto",
+              mx: "auto",
+            }}
           />
         </Box>
 
-        {/* 🔹 Grid perfectamente responsivo */}
+        {/* Grid de combos */}
         <Grid
           container
-          spacing={10}
+          spacing={{ xs: 6, sm: 5, md: 6, lg: 8 }} // spacing mayor en xs para separar filas
           justifyContent="center"
           alignItems="stretch"
         >
@@ -213,17 +229,29 @@ export const PackSection = () => {
               sx={{
                 display: "flex",
                 justifyContent: "center",
+                mb: { xs: 3, sm: 0 }, // margen inferior adicional en móvil
               }}
             >
-              <Box sx={{ width: "100%", maxWidth: 510 }}>
+              <Box
+                sx={{
+                  width: "100%",
+                  maxWidth: { xs: "360px", sm: "400px", md: "450px" },
+                  mx: "auto",
+                }}
+              >
                 <ComboCard combo={combo} />
               </Box>
             </Grid>
           ))}
         </Grid>
       </Box>
-      <br /><br /> <br /><br />
 
+      {/* Espaciado inferior responsivo */}
+      <Box
+        sx={{
+          height: { xs: "18px", sm: "20px", md: "30px", lg: "40px" },
+        }}
+      />
     </Container>
   );
 };

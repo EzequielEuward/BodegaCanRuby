@@ -22,17 +22,26 @@ function App() {
         <HeroSection />
       </section>
 
-      <section >
+      <section>
         <Box
           sx={{
             position: 'relative',
             zIndex: 1,
-            backgroundImage: "url('/catas3.png')",
+            backgroundImage: {
+              xs: 'linear-gradient(180deg, #5D080D 0%, #2C0B0E 100%)',
+              sm: 'linear-gradient(180deg, #5D080D 0%, #2C0B0E 100%)',
+              md: 'linear-gradient(180deg, #5D080D 0%, #2C0B0E 100%)',
+              lg: "url('/catas3.png')",
+            },
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center top',
-
-            backgroundSize: '100% auto',
-            minHeight: { xs: 'auto', md: '600px', lg: '600px', xl: '600px' },
+            backgroundSize: {
+              xs: 'cover',
+              sm: 'cover',
+              md: 'cover',
+              lg: '100% auto',
+            },
+            minHeight: { xs: 'auto', sm: 'auto', md: '600px', lg: '600px', xl: '600px' },
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -42,24 +51,52 @@ function App() {
         </Box>
       </section>
 
+
       <section>
         <Box
           sx={{
             position: 'relative',
             zIndex: 2,
-            backgroundImage: "url('/cestaT1.png')",
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center top',
-            backgroundSize: '100% auto',
             backgroundColor: '#fff',
             minHeight: { xs: 'auto', md: '800px', lg: '1006px', xl: '1006px' },
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
           }}
         >
-          <CestaSection />
-          <CestaNavideniaSection />
+          {/* Parte superior con fondo rojo y texto */}
+          <Box
+            sx={{
+              backgroundImage: {
+                xs: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
+                sm: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
+                md: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
+                lg: "url('/cestatop.png')", 
+              },
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center top',
+              minHeight: { xs: '200px', sm: '250px', md: '250px', lg: '250px' },
+              width: '100%',
+              display: 'flex',
+              alignItems: 'flex-start',
+              justifyContent: 'center',
+              pt: { xs: 4, md: 6 },
+            }}
+          >
+            <CestaSection />
+          </Box>
+
+          <Box
+            sx={{
+              backgroundImage: "url('/botcesta.png')",
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center top',
+              backgroundSize: '100% auto',
+              flex: 1,
+              width: '100%',
+            }}
+          >
+            <CestaNavideniaSection />
+          </Box>
         </Box>
       </section>
 
@@ -68,34 +105,66 @@ function App() {
           sx={{
             position: 'relative',
             zIndex: 3,
-            backgroundImage: "url('/lotesArriba.png')",
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center top',
-            backgroundSize: '100% auto',
             backgroundColor: '#fff',
-            minHeight: { xs: 'auto', md: '800px', lg: '1006px', xl: '1006px' },
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
           }}
         >
-          <LoteSection />
-          <PackSection />
+          {/* Parte superior con fondo rojo para LoteSection */}
+          <Box
+            sx={{
+              backgroundImage: {
+                xs: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
+                sm: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
+                md: 'linear-gradient(180deg, #5D080D 0%, #5D080D 100%)',
+                lg: "url('/packTop.png')",
+              },
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center top',
+              backgroundSize: '100% auto',
+              minHeight: {
+                xs: '200px',
+                sm: '250px',
+                md: '250px',
+                lg: '200px'
+              },
+              width: '100%',
+              display: 'flex',
+              alignItems: 'flex-start',
+              justifyContent: 'center',
+              pt: { xs: 4, md: 6 },
+            }}
+          >
+            <LoteSection />
+          </Box>
+
+          {/* Parte media con guirnaldas para PackSection */}
+          <Box
+            sx={{
+              backgroundImage: "url('/lotesArribaT.png')",
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center top',
+              backgroundSize: '100% auto',
+              width: '100%',
+              flex: 1,
+            }}
+          >
+            <PackSection />
+          </Box>
+
+          {/* Parte inferior decorativa */}
           <Box
             sx={{
               width: '100%',
-              height: { xs: 300, md: 400 },
+              height: { xs: 200, sm: 250, md: 300, lg: 400 },
               backgroundImage: "url('/lotesAbajo.png')",
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center bottom',
               backgroundSize: '100% auto',
-              backgroundColor: '#fff',
             }}
           />
-        </Box >
-
+        </Box>
       </section>
-
 
       <section>
         <Box
@@ -134,6 +203,7 @@ function App() {
           <Customization />
         </Box>
       </section>
+
       <section>
         <Footer />
       </section>

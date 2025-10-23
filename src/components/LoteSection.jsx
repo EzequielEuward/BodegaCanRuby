@@ -6,30 +6,38 @@ export const LoteSection = () => {
     <Box
       sx={{
         width: '100%',
-        overflow: 'hidden',
         position: 'relative',
       }}
     >
-      {/* --- Contenido principal --- */}
-      <Box
-        sx={{
-          position: 'relative',
-          padding: '100px 10px 80px',
-          textAlign: 'center',
-          color: '#e6c88a',
-          overflow: 'hidden',
-        }}
-      >
-        <Container maxWidth="md">
+      <Container maxWidth="lg">
+        <Box
+          sx={{
+            position: 'relative',
+            padding: { 
+              xs: '15px 10px', // Reducido
+              sm: '20px 20px', // Reducido
+              md: '30px 20px', // Reducido
+              lg: '40px 20px'  // Reducido
+            },
+            textAlign: 'center',
+            color: '#e6c88a',
+          }}
+        >
           <Typography
             variant="h5"
             component="p"
             sx={{
               fontWeight: 300,
               fontFamily: "Georgia, 'Times New Roman', serif",
-              marginBottom: '20px',
-              lineHeight: 1.6,
+              marginBottom: { xs: '10px', md: '15px' }, // Reducido
+              lineHeight: 1.5, // Reducido
               color: '#fff',
+              fontSize: {
+                xs: '1rem',    // Reducido
+                sm: '1.1rem',  // Reducido
+                md: '1.3rem',  // Reducido
+                lg: '1.5rem'   // Reducido
+              }
             }}
           >
             Nuestros{' '}
@@ -43,9 +51,7 @@ export const LoteSection = () => {
             >
               Lotes Navideños 
             </Box>
-           {' '}son la elección perfecta{' '}
-
-            <Typography></Typography>
+            {' '}son la elección perfecta{' '}
             <Box
               component="span"
               sx={{
@@ -55,7 +61,6 @@ export const LoteSection = () => {
             >
               para tus regalos de empresas.
             </Box>
-            .
           </Typography>
 
           <Typography
@@ -66,27 +71,31 @@ export const LoteSection = () => {
               fontFamily: "Georgia, 'Times New Roman', serif",
               fontStyle: 'italic',
               color: '#fff',
-              lineHeight: 1.6,
+              lineHeight: 1.5, // Reducido
+              fontSize: {
+                xs: '1.1rem',  // Reducido
+                sm: '1.3rem',  // Reducido
+                md: '1.4rem',  // Reducido
+                lg: '1.75rem'  // Reducido
+              }
             }}
           >
-           Haz que esta Navidad sea aún más{' '}
+            Haz que esta Navidad sea aún más{' '}
             <Box
               component="span"
               sx={{
                 fontWeight: 'bold',
                 color: '#e2f0a6',
+                display: { xs: 'block', sm: 'inline' },
+                mt: { xs: 0.5, sm: 0 } // Reducido
               }}
             >
               especial para tu equipo
             </Box>
             !
           </Typography>
-        </Container>
-      </Box>
-
-     
+        </Box>
+      </Container>
     </Box>
   );
 };
-
-export default LoteSection;
